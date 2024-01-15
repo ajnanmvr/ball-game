@@ -64,7 +64,7 @@ while True:
     if gameOver:
         img = imgGameOver
         cv2.putText(img, str(score[1] + score[0]).zfill(2), (585, 360), cv2.FONT_HERSHEY_COMPLEX,
-                    2.5, (200, 0, 200), 5)
+                    2.5, (20, 51, 70), 5)
 
     # If game not over move the ball
     else:
@@ -79,8 +79,8 @@ while True:
         # Draw the ball
         img = cvzone.overlayPNG(img, imgBall, ballPos)
 
-        cv2.putText(img, str(score[0]), (300, 650), cv2.FONT_HERSHEY_COMPLEX, 3, (255, 255, 255), 5)
-        cv2.putText(img, str(score[1]), (900, 650), cv2.FONT_HERSHEY_COMPLEX, 3, (255, 255, 255), 5)
+        cv2.putText(img, str(score[0]), (500, 650), cv2.FONT_HERSHEY_COMPLEX, 3, (0, 0, 0), 5)
+        cv2.putText(img, str(score[1]), (700, 650), cv2.FONT_HERSHEY_COMPLEX, 3, (0, 0, 0), 5)
 
     img[580:700, 20:233] = cv2.resize(imgRaw, (213, 120))
 
